@@ -1,0 +1,49 @@
+{
+  "executables": [{
+    "name": "foundation-example",
+    "sources": [
+      "src"
+    ],
+    "dependencies": [
+      "foundation-example-libA"
+    ]
+  }],
+  "libraries": [{
+    "name": "foundation-example-libB",
+    "sources": [
+      "src/libB"
+    ],
+    "headers": [
+      "include/libB"
+    ],
+    "publish": [
+      "include"
+    ]
+  }, {
+    "name": "foundation-example-libC",
+    "sources": [
+      "src/libC"
+    ],
+    "headers": [
+      "include/libC"
+    ],
+    "publish": [
+      "include"
+    ]
+  }, {
+    "name": "foundation-example-libA",
+    "sources": [
+      "src/libA"
+    ],
+    "headers": [
+      "include/libA"
+    ],
+    "publish": [
+      "include"
+    ],
+    "dependencies": [
+      "foundation-example-libB",
+      "foundation-example-libC"
+    ]
+  }]
+}
