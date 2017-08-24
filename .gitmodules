@@ -1,0 +1,3 @@
+[submodule "lib/json-cmake"]
+	path = lib/json-cmake
+	url = https://github.com/sbellus/json-cmake.git
