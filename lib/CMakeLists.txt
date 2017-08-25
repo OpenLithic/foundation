@@ -67,7 +67,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 get_filename_component(FOUNDATION_DIR ${FOUNDATION_CONFIG} DIRECTORY)
 file(READ ${FOUNDATION_CONFIG} configString)
-sbeParseJson(configJSON configString)s
+sbeParseJson(configJSON configString)
 
 foreach(librariesIndex ${configJSON.libraries})
   set(library "configJSON.libraries_${librariesIndex}")
