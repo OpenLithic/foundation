@@ -61,13 +61,13 @@ endfunction()
 project(foundation)
 include(${CMAKE_CURRENT_SOURCE_DIR}/json-cmake/JSONParser.cmake)
 
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${FOUNDATION_OUTPUT_DIR}/lib)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${FOUNDATION_OUTPUT_DIR}/lib)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${FOUNDATION_OUTPUT_DIR}/bin)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 get_filename_component(FOUNDATION_DIR ${FOUNDATION_CONFIG} DIRECTORY)
 file(READ ${FOUNDATION_CONFIG} configString)
-sbeParseJson(configJSON configString)
+sbeParseJson(configJSON configString)s
 
 foreach(librariesIndex ${configJSON.libraries})
   set(library "configJSON.libraries_${librariesIndex}")
